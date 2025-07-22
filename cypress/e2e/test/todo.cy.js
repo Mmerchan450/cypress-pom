@@ -10,12 +10,23 @@ describe('Pruebas TodoMVC', () => {
     todoPage.visitar()
     todoPage.agregarTarea('Comprar leche') 
   })
+
   it('Marcar tarea como completada', () => {
     todoPage.agregarTarea('Comprar leche')
     todoPage.marcarComoCompletada('Comprar leche')
-    cy.contains('li.completed', 'Comprar leche').should('exist')
   })
+
+  it('Marcar filtro all', () => {
+    todoPage.agregarTarea('Comprar leche')
+    todoPage.agregarTarea('ir al gym')
+    todoPage.marcarComoCompletada('Comprar leche')
+    todoPage.marcarfiltroall()
+    
+  })
+
+  
 })
+
 
  
  

@@ -29,4 +29,8 @@ export class TodoPage {
           .find('button.destroy')
           .click()
       }
+
+      marcarfiltroall() {
+        cy.get('.filters a[href="#/"]').click()
+      }
     }
